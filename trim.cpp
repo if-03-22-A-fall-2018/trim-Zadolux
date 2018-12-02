@@ -18,47 +18,38 @@
 
 void trim(const char* source, char* trimmed_string)
 {
-  int counter = 0;
   char trimmed[STRLEN];
-  bool isStringEnd = false;
+  int wCounter = 0;
+  int trimCounter = 0;
 
   if(source[0] != '\0')
   {
-    for(int i = 0; i < STRLEN; i++)
+    while(source[wCounter] == ' ')
     {
-      if(source[i] == ' ' && !isStringEnd)
-      {
-        int whitespaceCounter = 0;
+      wCounter++;
+    }
 
-        while(source[i + whitespaceCounter] == ' ' && !isStringEnd)
+    for(int i = wCounter; i < STRLEN; i++)
+    {
+      if(source[i] == ' ')
+      {
+        wCounter = 0;
+
+        while(source[wCounter] == ' ')
         {
-          if(source[i + whitespaceCounter] == ' ')
-          {
-            whitespaceCounter++;
-          }
-          else
-          {
-            if(source[i + whitespaceCounter] == '\0')
-            {
-              isStringEnd = true;
-            }
-          }
+          wCounter++;
         }
 
-          counter++;
-          trimmed[counter] = source[i];
+        if(source[i] != '\0')
+        {
+          trimmed[trimCounter] = source[i];
+          trimCounter++;
+        }
       }
       else
       {
-        if(!isStringEnd)
-        {
-          trimmed[counter] = source[i];
-          counter++;
-        }
-        else
-        {
-          trimmed[counter] = '\0';
-        }
+        trimmed[trimCounter] = source[i];
+        trimCounter++;
       }
     }
 

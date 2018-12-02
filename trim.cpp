@@ -35,15 +35,18 @@ void trim(const char* source, char* trimmed_string)
       {
         wCounter = 0;
 
-        while(source[wCounter] == ' ')
+        while(source[i + wCounter] == ' ')
         {
           wCounter++;
         }
 
         if(source[i] != '\0')
         {
-          trimmed[trimCounter] = source[i];
-          trimCounter++;
+          if(source[i + wCounter] != '\0')
+          {
+            trimmed[trimCounter] = source[i];
+            trimCounter++;
+          }
         }
       }
       else

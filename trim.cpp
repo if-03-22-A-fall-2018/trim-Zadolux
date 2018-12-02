@@ -1,10 +1,10 @@
 /*----------------------------------------------------------
-*				HTBLA-Leonding / Klasse: <your class>
+*				HTBLA-Leonding / Klasse: 2AHIF
  * ---------------------------------------------------------
- * Exercise Number: 0
+ * Exercise Number: 9
  * Title:			trim.cpp
- * Author:			P. Bauer
- * Due Date:		March 14, 2015
+ * Author:			M. Wallinger
+ * Due Date:		December 4, 2018
  * ----------------------------------------------------------
  * Description:
  * Test functions for trim.h

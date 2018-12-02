@@ -19,23 +19,50 @@
 void trim(const char* source, char* trimmed_string)
 {
   int counter = 0;
-  bool noMoreSpaces = false;
   char trimmed[STRLEN];
+  bool isStringEnd = false;
 
   if(source[0] != '\0')
   {
     for(int i = 0; i < STRLEN; i++)
     {
-      if(source[i] == ' ' && !noMoreSpaces)
+      if(source[i] == ' ' && !isStringEnd)
       {
-        trimmed[counter] = source[i];
-        counter++;
+        int whitespaceCounter = 0;
+
+        while(source[i + whitespaceCounter] == ' ' && !isStringEnd)
+        {
+          if(source[i + whitespaceCounter] == ' ')
+          {
+            whitespaceCounter++;
+          }
+          else
+          {
+            if(source[i + whitespaceCounter] == '\0')
+            {
+              isStringEnd = true;
+            }
+          }
+        }
+
+          counter++;
+          trimmed[counter] = source[i];
       }
       else
       {
-        noMoreSpaces = true;
+        if(!isStringEnd)
+        {
+          trimmed[counter] = source[i];
+          counter++;
+        }
+        else
+        {
+          trimmed[counter] = '\0';
+        }
       }
     }
+
+    strcpy(trimmed_string, trimmed);
   }
   else
   {

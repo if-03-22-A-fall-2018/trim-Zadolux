@@ -31,9 +31,9 @@ TEST(empty_substring)
 }
 
 /******************************************************************************
- * total_string: describe yourself.
- *
- *
+ * total_string:
+ * Checks if the program returns the full string when there's nothing to
+ * trim.
  ******************************************************************************/
 TEST(total_string)
 {
@@ -45,9 +45,8 @@ TEST(total_string)
 }
 
 /******************************************************************************
- * leading_blanks: describe yourself.
- *
- *
+ * leading_blanks:
+ * Check if the program returns the trimmed string only with leading blanks.
  ******************************************************************************/
 TEST(leading_blanks)
 {
@@ -59,9 +58,8 @@ TEST(leading_blanks)
 }
 
 /******************************************************************************
- * trailing_blanks: describe yourself.
- *
- *
+ * trailing_blanks:
+ * Checks if the program returns the trimmed string only with trailing blanks.
  ******************************************************************************/
 TEST(trailing_blanks)
 {
@@ -73,9 +71,9 @@ TEST(trailing_blanks)
 }
 
 /******************************************************************************
- * leading_and_trailing_blanks: describe yourself.
- *
- *
+ * leading_and_trailing_blanks:
+ * Check if the program returns the trimmed string with both trailing and
+ * leading blanks.
  ******************************************************************************/
 TEST(leading_and_trailing_blanks)
 {

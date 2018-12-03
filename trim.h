@@ -12,7 +12,7 @@
  */
 #ifndef __TRIM_H
 #define __TRIM_H
-#define STRLEN 2
+#define STRLEN 16
 // If STRLEN would be too small, the following error would occur:
 // "initializer-string for char array is too long"
 

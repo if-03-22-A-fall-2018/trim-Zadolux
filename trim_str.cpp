@@ -16,7 +16,7 @@ int main(int argc, char const *argv[]) {
   char rawString[512];
   char trimmedString[512];
 
-  for(int i = 1; i < argc; i++)
+  for(int i = 0; i < argc; i++)
   {
     printf("Arg no. %d: '%s'\n", i, argv[i]);
     strcat(rawString, argv[i]);

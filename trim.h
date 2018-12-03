@@ -12,7 +12,9 @@
  */
 #ifndef __TRIM_H
 #define __TRIM_H
-#define STRLEN 16
+#define STRLEN 2
+// If STRLEN would be too small, the following error would occur:
+// "initializer-string for char array is too long"
 
 void trim(const char* source, char* trimmed_string);
 bool char_ends(char checkchar);

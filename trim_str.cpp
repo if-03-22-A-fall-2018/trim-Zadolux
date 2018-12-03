@@ -10,8 +10,11 @@
  * Test functions for trim.h
  * ----------------------------------------------------------
  */
+#include <stdio.h>
 
 int main(int argc, char const *argv[]) {
-  /* code */
+  printf("1st arg: %s\n", argv[0]);
+  printf("2nd arg: %s\n", argv[1]);
+  printf("3rd arg: %s\n", argv[2]);
   return 0;
 }

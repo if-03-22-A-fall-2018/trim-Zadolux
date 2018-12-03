@@ -12,9 +12,7 @@
  */
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
-
-#define STRLEN 16
+#include "trim.h"
 
 void trim(const char* source, char* trimmed_string)
 {
@@ -22,7 +20,7 @@ void trim(const char* source, char* trimmed_string)
   int wCounter = 0;
   int trimCounter = 0;
 
-  if(source[0] != '\0')
+  if(!char_ends(source[0]))
   {
     while(source[wCounter] == ' ')
     {
@@ -42,7 +40,7 @@ void trim(const char* source, char* trimmed_string)
 
         if(source[i] != '\0')
         {
-          if(source[i + wCounter] != '\0')
+          if(!char_ends(source[i + wCounter]))
           {
             trimmed[trimCounter] = source[i];
             trimCounter++;
@@ -62,4 +60,12 @@ void trim(const char* source, char* trimmed_string)
   {
     strcpy(trimmed_string, source);
   }
+}
+
+bool char_ends(char checkchar)
+{
+  if(checkchar == '\0')
+    return true;
+  else
+    return false;
 }

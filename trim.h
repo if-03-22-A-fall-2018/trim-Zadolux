@@ -12,8 +12,9 @@
  */
 #ifndef __TRIM_H
 #define __TRIM_H
-#define STRLEN 32
+#define STRLEN 16
 
 void trim(const char* source, char* trimmed_string);
+bool char_ends(char checkchar);
 
 #endif

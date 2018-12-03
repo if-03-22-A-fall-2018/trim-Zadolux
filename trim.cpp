@@ -10,8 +10,6 @@
  * Test functions for trim.h
  * ----------------------------------------------------------
  */
-#include <stdio.h>
-#include <string.h>
 #include "trim.h"
 
 void trim(const char* source, char* trimmed_string)
